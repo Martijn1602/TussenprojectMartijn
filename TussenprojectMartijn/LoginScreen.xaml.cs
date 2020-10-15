@@ -36,7 +36,7 @@ namespace TussenprojectMartijn
                 SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
                 sqlCmd.CommandType = System.Data.CommandType.Text;
                 sqlCmd.Parameters.AddWithValue("@username", txtUsername.Text);
-                sqlCmd.Parameters.AddWithValue("@username", txtPassword.Password);
+                sqlCmd.Parameters.AddWithValue("@password", txtPassword.Password);
                 int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
                 if (count == 1)
                 {
